@@ -8,11 +8,10 @@ import {
 
 export const ProductRepository = dataSource
   .getRepository(Product)
-  .extend({
-    ...Object.assign(
+  .extend(Object.assign(
       MedusaProductRepository, 
       { target: Product }
     ),
-  })
+  )
 
 export default ProductRepository
